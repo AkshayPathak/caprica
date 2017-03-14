@@ -6,8 +6,8 @@
 2. **Clone and install dependencies.**
    Run the following commands:
    ```
-   git clone https://github.com/AkshayPathak/kepler.git
-   cd Kepler
+   git clone https://github.com/AkshayPathak/caprica.git
+   cd caprica
    npm install
    ```
 3. **Install Typescript.**
