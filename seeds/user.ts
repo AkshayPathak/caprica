@@ -1,27 +1,34 @@
 /*
  * This file creates some sample data and inserts it into the server
  */
-exports.seed = function(knex, Promise) {
+exports.seed = function (knex, Promise) {
     // Deletes ALL existing entries
     return knex("user").del()
-        .then(function() {
+        .then(function () {
+
+            // Get the current date
+            const date = new Date();
+
             // Create some table users
             const users = [{
-                first_name: "Akshay",
-                last_name: "Pathak",
-                age: 18,
-                username: "spectre10"
+                username: "spectre10",
+                password: "supersecret",
+                email: "akshaypathak1011@gmail.com",
+                created_at: date,
+                updated_at: date,
             }, {
-                    first_name: "Daniel",
-                    last_name: "Liu",
-                    age: 18,
-                    username: "candyland"
-                }, {
-                    first_name: "Golan",
-                    last_name: "Cheifetz",
-                    age: 17,
-                    username: "golche777"
-                }];
+                username: "candyland",
+                password: "password",
+                email: "candylander@yahoo.com",
+                created_at: date,
+                updated_at: date,
+            }, {
+                username: "golche888",
+                password: "123456",
+                email: "goldcdsalk5551@gmail.yahoo.ca",
+                created_at: date,
+                updated_at: date,
+            }];
 
             // Insert the data
             return knex("user").insert(users);
