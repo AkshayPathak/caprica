@@ -28,5 +28,5 @@
 6. **Run the server.** To run the server, compile all .ts files and head into
    the js-build folder and run
    ```
-   node server
+   node server.js
    ```
